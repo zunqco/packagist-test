@@ -1,0 +1,38 @@
+{
+    "name": "zunq/test",
+    "description": "testing.",
+    "keywords": [
+        "zunq"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zunq",
+            "email": "open-source@zunq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zunq\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "pestphp/pest": "^1.22",
+        "phpbench/phpbench": "^1.2"
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "benchmark": "./vendor/bin/phpbench run --report=default"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
